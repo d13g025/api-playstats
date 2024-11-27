@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors'); // Adicione esta linha
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./swagger');
 const jogadorRoutes = require('./routes/jogadorRoutes');
@@ -9,6 +10,7 @@ const timeAdversarioRoutes = require('./routes/timeAdversarioRoutes');
 
 const app = express();
 
+app.use(cors()); // Adicione esta linha antes das rotas
 app.use(express.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
