@@ -88,6 +88,18 @@ class Login {
             }
         });
     }
+
+    // Deleta um login pelo ID
+    deleta(id, res) {
+        const sql = 'DELETE FROM login WHERE id_login = ?';
+        conexao.query(sql, id, (erro, resultado) => {
+            if (erro) {
+                res.status(400).json(erro);
+            } else {
+                res.status(200).json({ mensagem: 'Login removido com sucesso!' });
+            }
+        });
+    }
 }
 
 module.exports = new Login(); // Exporta uma instância única da classe.

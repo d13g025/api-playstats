@@ -44,3 +44,8 @@ exports.buscaTimes = (req, res) => {
     }
     Login.buscaTimes(nome, res); // Chama o método de busca do modelo.
 };
+
+exports.deleta = (req, res) => {
+    const id = parseInt(req.params.id); // Garante que o ID será um número inteiro.
+    Login.deleta(id, res);
+}

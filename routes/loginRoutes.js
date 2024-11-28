@@ -121,4 +121,21 @@ router.post('/authenticate', autentica);
  */
 router.get('/buscaTimes/:nome', buscaTimes);
 
+/**
+ * @swagger
+ * /login/{id}:
+ *   delete:
+ *     summary: Deleta um login pelo ID
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Login deletado com sucesso
+ */
+router.delete('/:id', deleta);
+
 module.exports = router;
