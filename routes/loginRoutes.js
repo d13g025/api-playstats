@@ -5,7 +5,8 @@ const {
     adiciona,
     altera,
     autentica,
-    buscaTimes
+    buscaTimes,
+    deleta
 } = require('../controllers/loginController');
 
 const router = express.Router();

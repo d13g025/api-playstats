@@ -46,6 +46,7 @@ exports.buscaTimes = (req, res) => {
 };
 
 exports.deleta = (req, res) => {
-    const id = parseInt(req.params.id); // Garante que o ID será um número inteiro.
+    const id = parseInt(req.params.id);
+    console.log(`Recebido ID para exclusão: ${id}`);
     Login.deleta(id, res);
-}
+};
